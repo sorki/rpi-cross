@@ -9,6 +9,7 @@ Clone this repository and clone my fork of `nixpkgs` containing two patches with
 
 * libgpiod cross fix - https://github.com/NixOS/nixpkgs/pull/86645
 * raspberrypi-builder cross fix - https://github.com/NixOS/nixpkgs/pull/98858
+* device tree `_rpi` kernel variants cross fix - https://github.com/NixOS/nixpkgs/pull/99378
 
 ```bash
 git clone https://github.com/sorki/rpi-cross
