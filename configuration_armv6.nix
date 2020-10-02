@@ -36,9 +36,14 @@
     }
   ];
 
+  hardware.deviceTree.filter = "bcm2708-rpi-zero*.dtb";
   hardware.deviceTree.overlays = [
     { name = "pps"; dtsFile = ./dts/pps.dts; }
     { name = "spi"; dtsFile = ./dts/spi.dts; }
+    {
+      name = "hifiberry-dac";
+      dtboFile = "${pkgs.device-tree_rpi.overlays}/hifiberry-dac.dtbo";
+    }
   ];
 
 
@@ -46,4 +51,6 @@
     with import ./ssh-keys.nix; [ srk ];
 
   system.stateVersion = "20.09";
+
+
 }
